@@ -1,0 +1,14 @@
+This product (TOS App Center packaging of scrutiny) includes software developed
+by the scrutiny project:
+
+  Scrutiny - Web Dashboard for analyzing S.M.A.R.T. hard drive health
+  https://github.com/AnalogJ/scrutiny
+  Copyright AnalogJ and scrutiny contributors
+  Licensed under the MIT License
+
+The packaged binaries (scrutiny-web, scrutiny-collector-metrics) are the
+unmodified release artifacts published in the upstream project's GitHub
+Releases; their SHA256 is pinned in the UPSTREAM file of this repository.
+The TOS packaging metadata, build scripts, systemd units/timer, config seed
+and documentation in this repository are original work by ericbyz, licensed
+under the MIT License.

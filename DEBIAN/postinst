@@ -1,0 +1,43 @@
+#!/bin/bash
+# Post-installation script — runs after the package is installed
+set -e
+
+APPID="scrutiny"
+APP_DIR="/usr/local/${APPID}"
+
+# Dedicated system user (web service)
+if ! id -u "${APPID}" > /dev/null 2>&1; then
+    useradd --system --no-create-home --shell /usr/sbin/nologin "${APPID}" 2>/dev/null || true
+fi
+
+chown -R "${APPID}:${APPID}" "${APP_DIR}" 2>/dev/null || true
+
+# Config + state directories (config survives upgrades, db/log in /var/lib)
+mkdir -p /etc/scrutiny /var/lib/scrutiny 2>/dev/null || true
+[ -f /etc/scrutiny/scrutiny.yaml ] || cp "${APP_DIR}/scrutiny.yaml.default" /etc/scrutiny/scrutiny.yaml
+chown -R "${APPID}:${APPID}" /var/lib/scrutiny 2>/dev/null || true
+chmod 640 /etc/scrutiny/scrutiny.yaml 2>/dev/null || true
+
+# smartctl is required by the collector for S.M.A.R.T. reads
+if ! command -v smartctl >/dev/null 2>&1; then
+    echo "WARNING: smartctl not found — S.M.A.R.T. collection will fail until"
+    echo "         smartmontools is available. The dashboard still works."
+fi
+
+case "$1" in
+    configure)
+        if [ -n "$2" ]; then
+            echo "${APPID}: upgrading from version $2 (config in /etc/scrutiny and history in /var/lib/scrutiny preserved)"
+        fi
+        systemctl daemon-reload 2>/dev/null || true
+        systemctl enable "scrutiny-web.service" "scrutiny-collector.timer" 2>/dev/null || true
+        systemctl start "scrutiny-web.service" 2>/dev/null || true
+        systemctl start "scrutiny-collector.timer" 2>/dev/null || true
+        ;;
+    *) ;;
+esac
+
+echo "${APPID} installed successfully."
+echo "  dashboard: http://<NAS>:18232"
+echo "  config:    /etc/scrutiny/scrutiny.yaml"
+exit 0

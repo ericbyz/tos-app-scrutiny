@@ -1,0 +1,15 @@
+Package: scrutiny
+Version: 0.10.0
+Architecture: amd64
+Section: utils
+Priority: optional
+Maintainer: ericbyz <ericbyz@users.noreply.github.com>
+Depends: systemd
+Description: Disk health dashboard for S.M.A.R.T. metrics (Scrutiny)
+ Scrutiny watches the health of every disk in the TNAS: collects S.M.A.R.T.
+ attributes daily (scrutiny-collector timer), stores the full history in
+ SQLite and shows failure-risk dashboards at http://<NAS>:18232 in a new
+ browser tab. Requires the smartctl binary for S.M.A.R.T. collection
+ (present on stock TOS; checked at install).
+ Upstream project: https://github.com/AnalogJ/scrutiny (MIT), packaged
+ unmodified.

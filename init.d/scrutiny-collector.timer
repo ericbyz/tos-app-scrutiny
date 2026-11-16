@@ -1,0 +1,11 @@
+[Unit]
+Description=Scrutiny - daily S.M.A.R.T. collection schedule (TOS)
+
+[Timer]
+# collect S.M.A.R.T. metrics once a day (02:30); catch up on missed runs
+OnCalendar=*-*-* 02:30:00
+Persistent=true
+RandomizedDelaySec=600
+
+[Install]
+WantedBy=timers.target

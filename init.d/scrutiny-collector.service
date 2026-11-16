@@ -1,0 +1,31 @@
+[Unit]
+Description=Scrutiny - S.M.A.R.T. metrics collector (scrutiny-collector) (TOS)
+
+[Service]
+Type=oneshot
+# the collector reads raw S.M.A.R.T. data via smartctl — requires root
+User=root
+WorkingDirectory=/var/lib/scrutiny
+ExecStart=/usr/local/scrutiny/bin/scrutiny-collector-metrics run --config /etc/scrutiny/scrutiny.yaml
+TimeoutStartSec=300
+TimeoutStopSec=30
+
+# Security hardening; disk access needs real device nodes
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=false
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+MemoryDenyWriteExecute=true
+LockPersonality=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+SystemCallArchitectures=native
+
+ReadWritePaths=/var/lib/scrutiny /etc/scrutiny
+
+LimitNOFILE=65536

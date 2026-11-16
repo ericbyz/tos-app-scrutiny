@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+APPID="scrutiny"
+case "$1" in
+    remove|deconfigure)
+        systemctl stop "scrutiny-collector.timer" "scrutiny-web.service" 2>/dev/null || true
+        systemctl disable "scrutiny-collector.timer" "scrutiny-web.service" 2>/dev/null || true
+        ;;
+    upgrade|failed-upgrade) ;;
+    *) ;;
+esac
+exit 0

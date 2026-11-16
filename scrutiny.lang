@@ -1,0 +1,155 @@
+[zh-cn]
+name = "Scrutiny 磁盘健康面板"
+auth = "ericbyz"
+descript = "TNAS 硬盘 S.M.A.R.T. 健康仪表盘:每日自动采集全部硬盘 SMART 属性,历史数据存于本地 SQLite,浏览器打开 http://<NAS>:18232 查看各盘健康度与老化趋势。上游二进制原样封装(MIT),需要 smartctl(TOS 出厂自带);采集计划默认每日 02:30,可改 /etc/scrutiny/scrutiny.yaml。"
+note = "1. 将上游 AnalogJ/scrutiny(MIT)原样封装为 TOS 应用。"
+
+[zh-hk]
+name = "Scrutiny 磁盤健康面板"
+auth = "ericbyz"
+descript = "TNAS 硬盤 S.M.A.R.T. 健康儀表盤:每日自動採集全部硬盤 SMART 屬性,歷史數據存於本地 SQLite,瀏覽器打開 http://<NAS>:18232 查看各盤健康度與老化趨勢。上游二進制原樣封裝(MIT),需要 smartctl(TOS 出廠自帶);採集計劃默認每日 02:30,可改 /etc/scrutiny/scrutiny.yaml。"
+note = "1. 将上游 AnalogJ/scrutiny(MIT)原样封装为 TOS 应用。"
+
+[en-us]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[ko-kr]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "NAS의 모든 디스크 S.M.A.R.T. 속성을 매일 자동 수집하고 이력을 로컬 SQLite에 저장합니다. http://<NAS>:18232에서 디스크별 건강도와 노화 추세를 확인하세요. 업스트림 바이너리 무수정 패키징(MIT). smartctl 필요(기본 TOS 포함)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[ja-jp]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "NAS の全ディスクの S.M.A.R.T. 属性を毎日自動収集し、履歴をローカル SQLite に保存。http://<NAS>:18232 で各ディスクの健康度と劣化傾向を確認できます。上流バイナリを無改修でパッケージ化(MIT)。smartctl 必須(標準 TOS に同梱)。"
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[de-de]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T.-Gesundheitsdashboard für alle TNAS-Festplatten: sammelt täglich SMART-Attribute, speichert die Historie lokal in SQLite und zeigt Ausfallrisiko-Trends unter http://<NAS>:18232. Upstream unverändert (MIT). Benötigt smartctl (im Standard-TOS enthalten)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[fr-fr]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "Tableau de bord de santé S.M.A.R.T. des disques du TNAS : collecte quotidienne des attributs SMART, historique en SQLite local, tendances de défaillance sur http://<NAS>:18232. Amont intact (MIT). Nécessite smartctl (inclus dans le TOS standard)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[it-it]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[es-es]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "Panel de salud S.M.A.R.T. de los discos del TNAS: recolecta atributos SMART a diario, guarda el historial en SQLite local y muestra tendencias de fallo en http://<NAS>:18232. Upstream intacto (MIT). Requiere smartctl (incluido en TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[hu-hu]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[pl-pl]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[tr-tr]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[ru-ru]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "Панель здоровья S.M.A.R.T. дисков NAS: ежедневно собирает атрибуты SMART, хранит историю в локальном SQLite и показывает тренды отказа на http://<NAS>:18232. Оригинальные бинарники без изменений (MIT). Требуется smartctl (есть в TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[pt-pt]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[cs-cz]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[da-dk]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[nl-nl]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[nb-no]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[sv-se]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[el-gr]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[ro-ro]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[th-th]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[vi-vn]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[id-id]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[ar-sa]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."
+
+[he-il]
+name = "Scrutiny Disk Health"
+auth = "ericbyz"
+descript = "S.M.A.R.T. disk health dashboard for the TNAS: collects SMART attributes daily, keeps the full history in SQLite and shows failure-risk trends at http://<NAS>:18232. Packaged unmodified from upstream AnalogJ/scrutiny (MIT). Requires smartctl (included in stock TOS)."
+note = "1. Repackaged upstream AnalogJ/scrutiny (MIT) unmodified for TOS."

@@ -1,0 +1,33 @@
+# Scrutiny 配置(TOS 封装默认值)
+# 安装后位于 /etc/scrutiny/scrutiny.yaml,修改后执行:
+#   systemctl restart scrutiny-web
+# 完整参数说明: https://github.com/AnalogJ/scrutiny#configuration
+version: 2
+
+web:
+  listen:
+    # TOS 应用中心对外端口(悬浮窗图标直接打开 http://<NAS>:18232)
+    port: 18232
+    host: 0.0.0.0
+    basepath: ''
+  database:
+    location: /var/lib/scrutiny/scrutiny.db
+
+log:
+  level: INFO
+  file: /var/lib/scrutiny/web.log
+
+# 要监控的磁盘:留空 = 自动扫描全部盘符(/dev/disk/by-id)
+# 指定示例:
+# devices:
+#   - /dev/disk/by-id/ata-WDC_WD40EZBX-xxxx
+devices: []
+
+collector:
+  api:
+    # 上报地址:本机 scrutiny-web,勿改
+    endpoint: 'http://127.0.0.1:18232'
+    # 定时采集由 scrutiny-collector.timer 触发(默认每天一次)
+  thresholds:
+    smart: 10
+    attribute: 20

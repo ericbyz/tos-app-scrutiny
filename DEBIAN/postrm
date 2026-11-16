@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+APPID="scrutiny"
+if [ "$1" = "purge" ]; then
+    systemctl stop "scrutiny-collector.timer" "scrutiny-web.service" 2>/dev/null || true
+    id -u "${APPID}" >/dev/null 2>&1 && userdel "${APPID}" 2>/dev/null || true
+    rm -rf /var/lib/scrutiny /etc/scrutiny /usr/local/scrutiny 2>/dev/null || true
+    rm -f /etc/systemd/system/scrutiny-web.service \
+          /etc/systemd/system/scrutiny-collector.service \
+          /etc/systemd/system/scrutiny-collector.timer 2>/dev/null || true
+    systemctl daemon-reload 2>/dev/null || true
+fi
+exit 0

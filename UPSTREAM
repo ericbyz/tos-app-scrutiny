@@ -1,0 +1,20 @@
+# Upstream project pin — single source of truth for reproducible builds.
+# scrutiny is packaged unmodified from upstream AnalogJ/scrutiny (MIT).
+# IMPORTANT: this package must NOT modify the upstream binaries; it only adds
+# packaging metadata, systemd units, a config seed and docs.
+
+UPSTREAM_REPO=https://github.com/AnalogJ/scrutiny
+UPSTREAM_LICENSE=MIT
+
+UPSTREAM_TAG=v0.10.0
+UPSTREAM_VERSION=0.10.0
+
+ASSET_WEB_x86_64=scrutiny-web-linux-amd64
+ASSET_WEB_aarch64=scrutiny-web-linux-arm64
+ASSET_COLLECTOR_x86_64=scrutiny-collector-metrics-linux-amd64
+ASSET_COLLECTOR_aarch64=scrutiny-collector-metrics-linux-arm64
+
+SHA256_WEB_x86_64=aef180aa5187f77567d670310a7574a90d09cbda19b72540134eb32cd66bcdb0
+SHA256_WEB_aarch64=e066b818c1239c98f71a2d6354ef967011421ae1ef6e5d0f1ade2d45306a68c8
+SHA256_COLLECTOR_x86_64=d1d5180b10b2c183670c931c38ae149544627a0525640664b754d3a0fc48a5ad
+SHA256_COLLECTOR_aarch64=8b50d2bdbe67860e6c65549a58ac00640a864ed8453b2d085d4d1a71112c48f2

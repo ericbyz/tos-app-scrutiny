@@ -1,0 +1,39 @@
+[Unit]
+Description=Scrutiny - disk health dashboard (scrutiny-web) (TOS)
+After=network.target
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+[Service]
+Type=simple
+User=scrutiny
+Group=scrutiny
+WorkingDirectory=/var/lib/scrutiny
+ExecStart=/usr/local/scrutiny/bin/scrutiny-web --config /etc/scrutiny/scrutiny.yaml
+TimeoutStartSec=30
+TimeoutStopSec=10
+
+# Security hardening (TOS 7 review requires NoNewPrivileges/ProtectSystem/ProtectHome;
+# Restart= is intentionally omitted — service lifecycle is managed by the platform)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+MemoryDenyWriteExecute=true
+LockPersonality=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+SystemCallArchitectures=native
+
+# database + logs live under /var/lib/scrutiny only
+ReadWritePaths=/var/lib/scrutiny
+
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
