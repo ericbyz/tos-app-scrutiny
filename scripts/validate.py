@@ -112,8 +112,10 @@ def main() -> int:
             err(f"missing {svc}")
         else:
             body = open(svc, encoding="utf-8").read()
-            if "--config /etc/scrutiny/scrutiny.yaml" not in body:
-                err(f"{svc}: ExecStart must load /etc/scrutiny/scrutiny.yaml")
+            if svc.endswith("scrutiny-web.service") and "start --config /etc/scrutiny/scrutiny.yaml" not in body:
+                err(f"{svc}: ExecStart must be `scrutiny-web start --config /etc/scrutiny/scrutiny.yaml`")
+            if svc.endswith("scrutiny-collector.service") and "--api-endpoint http://127.0.0.1" not in body:
+                err(f"{svc}: ExecStart must pass --api-endpoint http://127.0.0.1:<web port>")
     if not os.path.exists("init.d/scrutiny-collector.timer"):
         err("missing init.d/scrutiny-collector.timer (daily SMART collection)")
 

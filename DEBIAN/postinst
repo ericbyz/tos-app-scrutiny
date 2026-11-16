@@ -14,7 +14,7 @@ chown -R "${APPID}:${APPID}" "${APP_DIR}" 2>/dev/null || true
 
 # Config + state directories (config survives upgrades, db/log in /var/lib)
 mkdir -p /etc/scrutiny /var/lib/scrutiny 2>/dev/null || true
-[ -f /etc/scrutiny/scrutiny.yaml ] || cp "${APP_DIR}/scrutiny.yaml.default" /etc/scrutiny/scrutiny.yaml
+[ -f /etc/scrutiny/scrutiny.yaml ] || cp "${APP_DIR}/packaging-extras/scrutiny.yaml.default" /etc/scrutiny/scrutiny.yaml
 chown -R "${APPID}:${APPID}" /var/lib/scrutiny 2>/dev/null || true
 chmod 640 /etc/scrutiny/scrutiny.yaml 2>/dev/null || true
 

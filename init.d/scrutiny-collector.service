@@ -6,7 +6,8 @@ Type=oneshot
 # the collector reads raw S.M.A.R.T. data via smartctl — requires root
 User=root
 WorkingDirectory=/var/lib/scrutiny
-ExecStart=/usr/local/scrutiny/bin/scrutiny-collector-metrics run --config /etc/scrutiny/scrutiny.yaml
+# collector takes the API endpoint via flag (its --config is the devices file)
+ExecStart=/usr/local/scrutiny/bin/scrutiny-collector-metrics run --api-endpoint http://127.0.0.1:18232
 TimeoutStartSec=300
 TimeoutStopSec=30
 

@@ -9,7 +9,7 @@ Type=simple
 User=scrutiny
 Group=scrutiny
 WorkingDirectory=/var/lib/scrutiny
-ExecStart=/usr/local/scrutiny/bin/scrutiny-web --config /etc/scrutiny/scrutiny.yaml
+ExecStart=/usr/local/scrutiny/bin/scrutiny-web start --config /etc/scrutiny/scrutiny.yaml
 TimeoutStartSec=30
 TimeoutStopSec=10
 
