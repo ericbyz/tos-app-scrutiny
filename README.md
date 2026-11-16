@@ -1,3 +1,17 @@
+# ⛔ 弃用记录(2026-11-16 VM 实测后)
+
+**scrutiny 0.10.0 硬依赖 InfluxDB 2.x**(web 启动即检查 `localhost:8086/api/v2/setup`,
+无禁用开关,二进制不内嵌时序库;上游部署形态 = scrutiny-web + influxdb 双容器)。
+这违背本项目 deb 封装约束「不得依赖外部数据库服务」。0.8 之前版本无此依赖但已停止
+维护,不值得封装。本仓封存留档,不提交应用中心。VM 实测细节:
+
+- CLI 与文档不符:`scrutiny-web` 是子命令结构(`start --config`),collector 的
+  `--config` 是 devices 文件、API 端点用 `--api-endpoint`;
+- `smartctl` 采集侧完全正常(TOS 出厂 smartctl 7.5,自动发现 /dev/sda);
+- 若未来上游提供 SQLite/内嵌时序模式,可解封本仓。
+
+---
+
 # tos-app-scrutiny
 
 将 [Scrutiny](https://github.com/AnalogJ/scrutiny)(S.M.A.R.T. 磁盘健康仪表盘,MIT)打包为 [铁威马 TOS](https://www.terra-master.com) 应用中心 **deb 类应用**(x86_64 + aarch64 双架构)。
